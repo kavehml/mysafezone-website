@@ -1,14 +1,12 @@
 :root {
-  --ink: #17364f;
-  --ink-soft: #496274;
-  --paper: #fffdf9;
+  --ink: #0d1b2a;
+  --ink-soft: #415a77;
+  --paper: #e0e1dd;
   --white: #ffffff;
-  --sky: #dcecf3;
-  --mint: #dfeee7;
-  --coral: #ef806c;
-  --coral-dark: #c95849;
-  --line: #cbd9df;
-  --shadow: 0 18px 48px rgba(23, 54, 79, 0.12);
+  --sky: #778da9;
+  --deep-sea: #1b263b;
+  --line: rgba(65, 90, 119, 0.34);
+  --shadow: 0 18px 48px rgba(13, 27, 42, 0.14);
   --max: 1180px;
 }
 
@@ -60,8 +58,8 @@ img {
   justify-content: space-between;
   gap: 2rem;
   padding: 0.75rem max(1rem, calc((100vw - var(--max)) / 2));
-  border-bottom: 1px solid rgba(23, 54, 79, 0.12);
-  background: rgba(255, 253, 249, 0.95);
+  border-bottom: 1px solid rgba(65, 90, 119, 0.28);
+  background: rgba(224, 225, 221, 0.96);
   backdrop-filter: blur(16px);
 }
 
@@ -145,7 +143,7 @@ img {
 .header-cta:focus-visible,
 .button-primary:hover,
 .button-primary:focus-visible {
-  background: #214c6b;
+  background: var(--deep-sea);
 }
 
 .hero {
@@ -175,7 +173,7 @@ img {
 
 .hero-wash {
   z-index: -1;
-  background: rgba(255, 253, 249, 0.6);
+  background: rgba(224, 225, 221, 0.64);
 }
 
 .hero-content {
@@ -186,7 +184,7 @@ img {
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: var(--coral-dark);
+  color: var(--ink-soft);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -216,13 +214,13 @@ h1 {
 }
 
 h1 span {
-  color: var(--coral-dark);
+  color: var(--ink-soft);
 }
 
 .hero-lead {
   max-width: 630px;
   margin-bottom: 1.5rem;
-  color: #2c4b61;
+  color: var(--deep-sea);
   font-size: clamp(1.05rem, 2vw, 1.25rem);
   line-height: 1.6;
 }
@@ -234,7 +232,7 @@ h1 span {
 }
 
 .button-secondary {
-  border-color: rgba(23, 54, 79, 0.35);
+  border-color: rgba(65, 90, 119, 0.56);
   color: var(--ink);
   background: rgba(255, 255, 255, 0.78);
 }
@@ -249,9 +247,9 @@ h1 span {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: clamp(2rem, 6vh, 4rem) 0 0;
-  border-top: 1px solid rgba(23, 54, 79, 0.25);
-  border-bottom: 1px solid rgba(23, 54, 79, 0.25);
-  background: rgba(255, 253, 249, 0.62);
+  border-top: 1px solid rgba(65, 90, 119, 0.42);
+  border-bottom: 1px solid rgba(65, 90, 119, 0.42);
+  background: rgba(224, 225, 221, 0.76);
 }
 
 .offer-facts div {
@@ -260,7 +258,7 @@ h1 span {
 }
 
 .offer-facts div + div {
-  border-left: 1px solid rgba(23, 54, 79, 0.25);
+  border-left: 1px solid rgba(65, 90, 119, 0.42);
 }
 
 .offer-facts dt {
@@ -337,6 +335,7 @@ h1 span {
   width: 100%;
   height: 205px;
   object-fit: cover;
+  filter: saturate(0.72) contrast(0.96);
 }
 
 .step-number {
@@ -371,12 +370,12 @@ h1 span {
   padding: 1.35rem;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--mint);
+  background: var(--paper);
 }
 
 .detail-kicker {
   margin-bottom: 0.25rem;
-  color: var(--coral-dark);
+  color: var(--ink-soft);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -422,7 +421,7 @@ h1 span {
 .text-button {
   min-width: 165px;
   padding: 0.72rem 0.9rem;
-  border: 1px solid rgba(23, 54, 79, 0.35);
+  border: 1px solid rgba(65, 90, 119, 0.56);
   border-radius: 6px;
   background: transparent;
   cursor: pointer;
@@ -472,11 +471,11 @@ h1 span {
   border-radius: 8px;
   color: var(--ink);
   background: var(--paper);
-  box-shadow: 0 30px 90px rgba(10, 35, 52, 0.3);
+  box-shadow: 0 30px 90px rgba(13, 27, 42, 0.34);
 }
 
 .info-dialog::backdrop {
-  background: rgba(13, 35, 50, 0.66);
+  background: rgba(13, 27, 42, 0.72);
   backdrop-filter: blur(4px);
 }
 
@@ -511,7 +510,7 @@ h1 span {
 }
 
 :focus-visible {
-  outline: 3px solid var(--coral);
+  outline: 3px solid var(--sky);
   outline-offset: 3px;
 }
 
@@ -529,7 +528,7 @@ h1 span {
   }
 
   .hero-wash {
-    background: rgba(255, 253, 249, 0.72);
+    background: rgba(224, 225, 221, 0.76);
   }
 
   .process-heading,
@@ -580,7 +579,7 @@ h1 span {
   }
 
   .hero-wash {
-    background: rgba(255, 253, 249, 0.58);
+    background: rgba(224, 225, 221, 0.64);
   }
 
   .hero-content {
@@ -601,7 +600,7 @@ h1 span {
   }
 
   .offer-facts div + div {
-    border-top: 1px solid rgba(23, 54, 79, 0.2);
+    border-top: 1px solid rgba(65, 90, 119, 0.34);
     border-left: 0;
   }
 
