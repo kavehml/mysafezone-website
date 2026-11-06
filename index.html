@@ -3,244 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Safe Zone</title>
+    <title>My Safe Zone | Affordable Therapy by Pneuma Health</title>
     <meta
       name="description"
-      content="Compassionate mental health care for individuals, couples, and families."
+      content="Affordable therapy at $99 per 60-minute session, with a free 15-minute discovery call and regulated mental health professionals."
     />
+    <meta name="theme-color" content="#17364f" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <div class="container nav-shell">
-        <a class="brand" href="#home" aria-label="My Safe Zone home">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">My Safe Zone</span>
-        </a>
+      <a class="brand" href="#home" aria-label="My Safe Zone home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="brand-name">My Safe Zone</span>
+      </a>
 
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <button class="nav-link" type="button" data-dialog="about-dialog">About</button>
+        <button class="nav-link" type="button" data-dialog="coverage-dialog">Coverage</button>
+        <a class="pneuma-link" href="https://pneumahealth.ca">By Pneuma Health</a>
+        <a class="header-cta" href="https://pneumahealth.janeapp.com">Book free call</a>
+      </nav>
     </header>
 
-    <main>
-      <section class="hero-section" id="home">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Warm, evidence-based mental health care</p>
-            <h1>Compassionate Mental Health Care for Individuals, Couples, and Families</h1>
-            <p class="hero-text">
-              At My Safe Zone, we provide a safe, welcoming, and confidential
-              space to support your journey toward mental wellness and healing. Our
-              dedicated team offers personalized, evidence-based therapy tailored to
-              your unique needs.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#contact">Contact Us</a>
-            </div>
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-background"
+          src="/assets/therapy-room-hero-blue-theme.png"
+          alt="A therapist seated in a bright, welcoming therapy room"
+        />
+        <div class="hero-wash" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">My Safe Zone · an initiative by Pneuma Health</p>
+          <h1 id="hero-title">Affordable therapy at <span>$99</span> per session.</h1>
+          <p class="hero-lead">
+            Start with a free 15-minute discovery call. We will help you find a regulated
+            professional who fits your needs, schedule, and coverage.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://pneumahealth.janeapp.com">
+              Book a free discovery call
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="button button-secondary" href="#how-it-works">See how it works</a>
           </div>
 
-          <div class="hero-visual">
-            <div class="hero-image-card">
-              <img
-                src="assets/therapy-room-hero-blue-theme.png"
-                alt="Therapist in a bright, welcoming office with a calm ocean view through the window"
-              />
+          <dl class="offer-facts" aria-label="Therapy service details">
+            <div>
+              <dt>15 minutes</dt>
+              <dd>Free discovery call</dd>
             </div>
-          </div>
+            <div>
+              <dt>$99</dt>
+              <dd>60-minute session</dd>
+            </div>
+            <div>
+              <dt>RPs · RP(Q)s · RSWs</dt>
+              <dd>Regulated clinicians</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
-      <section class="section intro-section">
-        <div class="container section-heading narrow">
-          <p class="section-label">Care That Meets You Where You Are</p>
-          <h2>Support that feels personal, respectful, and accessible.</h2>
-          <p>
-            Our approach is grounded in clinical excellence and shaped by compassion,
-            cultural awareness, and genuine connection. We support clients across a
-            wide range of concerns and create care plans that reflect each person's
-            goals, identity, and lived experience.
+      <section class="process" id="how-it-works" aria-labelledby="process-title">
+        <div class="process-heading">
+          <div>
+            <p class="eyebrow">Simple from the start</p>
+            <h2 id="process-title">Three steps to your safe zone.</h2>
+          </div>
+          <p class="process-intro">
+            No complicated intake maze. Begin with a short conversation, choose the right fit,
+            then book securely through Jane.
           </p>
         </div>
-      </section>
 
-      <section class="section feature-section">
-        <div class="container feature-grid">
-          <article class="card">
-            <h3>Individualized Support</h3>
-            <p>
-              Therapy is never one-size-fits-all. We tailor treatment to your
-              concerns, strengths, and pace.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Inclusive and Respectful Care</h3>
-            <p>
-              We welcome clients from diverse backgrounds and strive to offer a
-              space where you feel heard, understood, and supported.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Virtual and In-Person Options</h3>
-            <p>
-              We make it easier to access care with flexible therapy options
-              designed to fit your schedule and comfort.
-            </p>
-          </article>
+        <div class="process-grid" role="tablist" aria-label="How therapy works">
+          <button
+            class="process-step is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="process-detail"
+            data-title="Tell us what you need"
+            data-copy="Book a free 15-minute discovery call. We will listen, answer your questions, and learn what kind of support would feel right."
+          >
+            <span class="step-number">01</span>
+            <img src="/assets/step-discovery.png" alt="Illustration of exploring therapist options" />
+            <span class="step-label">Free discovery</span>
+          </button>
+
+          <button
+            class="process-step"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="process-detail"
+            data-title="Meet your match"
+            data-copy="Connect with an RP, RP (Qualifying), or RSW based on your goals, preferences, availability, and insurance coverage."
+          >
+            <span class="step-number">02</span>
+            <img src="/assets/step-match.png" alt="Illustration of choosing an appointment" />
+            <span class="step-label">Match and book</span>
+          </button>
+
+          <button
+            class="process-step"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="process-detail"
+            data-title="Begin therapy"
+            data-copy="Meet with your therapist for a focused 60-minute session at a clear $99 rate. Future appointments are booked through Jane."
+          >
+            <span class="step-number">03</span>
+            <img src="/assets/step-session.png" alt="Illustration of an online therapy session" />
+            <span class="step-label">Start your sessions</span>
+          </button>
+        </div>
+
+        <div class="process-detail" id="process-detail" role="tabpanel" aria-live="polite">
+          <div>
+            <p class="detail-kicker">Step 1</p>
+            <h3>Tell us what you need</h3>
+          </div>
+          <p>
+            Book a free 15-minute discovery call. We will listen, answer your questions, and learn
+            what kind of support would feel right.
+          </p>
+          <a href="https://pneumahealth.janeapp.com">Book through Jane <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
-      <section class="section about-section" id="about">
-        <div class="container split-layout">
-          <div class="split-copy">
-            <p class="section-label">About My Safe Zone</p>
-            <h2>A welcoming place to begin your healing journey.</h2>
-            <p>
-              My Safe Zone was created to offer mental health care that is
-              compassionate, clinically informed, and responsive to the real needs
-              of the people we serve. We understand that reaching out for support
-              can feel vulnerable, and we aim to make that first step feel clear,
-              respectful, and welcoming.
-            </p>
-            <p>
-              We believe meaningful therapy begins with trust. Our clinicians work
-              collaboratively with clients to understand their concerns, identify
-              goals, and create a path forward that feels realistic and supportive.
-            </p>
-          </div>
-          <div class="values-panel">
-            <article>
-              <h3>Compassion</h3>
-              <p>We meet each person with empathy, warmth, and care.</p>
-            </article>
-            <article>
-              <h3>Respect</h3>
-              <p>We honor each client's background, identity, beliefs, and pace.</p>
-            </article>
-            <article>
-              <h3>Collaboration</h3>
-              <p>We work with clients, not on them, building treatment around shared goals.</p>
-            </article>
-            <article>
-              <h3>Growth</h3>
-              <p>We support lasting change through insight, skill-building, and practical strategies.</p>
-            </article>
-          </div>
+      <section class="trust-band" aria-label="Service and coverage information">
+        <div>
+          <p class="eyebrow">Professional care, clearer cost</p>
+          <h2>Support from regulated therapists and social workers.</h2>
         </div>
-      </section>
-
-      <section class="section services-section" id="services">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-label">Our Services</p>
-            <h2>Therapy designed to support emotional wellness and meaningful change.</h2>
-            <p>
-              We offer therapy and mental health support for a range of personal,
-              relational, and emotional challenges.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <h3>Individual Therapy</h3>
-              <p>
-                One-to-one counselling focused on anxiety, stress, burnout, trauma,
-                depression, self-esteem, and personal growth.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3>Couples Therapy</h3>
-              <p>
-                Support for communication, conflict, trust, connection, and
-                relationship repair in a structured and compassionate setting.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3>Family Support</h3>
-              <p>
-                Guidance for families navigating conflict, transitions, boundaries,
-                caregiving stress, and changing family dynamics.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3>Virtual Therapy</h3>
-              <p>
-                Secure online sessions that make care more convenient and
-                accessible from anywhere in Ontario.
-              </p>
-            </article>
-          </div>
-
-          <div class="issues-panel">
-            <h3>Common Areas of Support</h3>
-            <ul class="issues-list">
-              <li>Anxiety and stress</li>
-              <li>Depression and low mood</li>
-              <li>Burnout</li>
-              <li>Trauma</li>
-              <li>Grief and loss</li>
-              <li>Relationship challenges</li>
-              <li>Life transitions</li>
-              <li>Self-esteem</li>
-              <li>Emotional regulation</li>
-              <li>Family conflict</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="container contact-shell">
-          <div class="contact-copy">
-            <p class="section-label">Contact Us</p>
-            <h2>Take the first step toward support.</h2>
-            <p>
-              We welcome your questions and are here to help you take the next
-              step. Reach out by phone or email to learn more about our services.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="tel:+16475472323">Call Us</a>
-              <a class="button button-secondary" href="mailto:info@mysafezone.ca">Email Us</a>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <h3>My Safe Zone</h3>
-            <p>Compassionate, client-centered mental health care</p>
-            <ul class="contact-list">
-              <li>
-                <strong>Phone:</strong>
-                <a href="tel:+16475472323">(647) 547-2323</a>
-              </li>
-              <li>
-                <strong>Email:</strong>
-                <a href="mailto:info@mysafezone.ca">info@mysafezone.ca</a>
-              </li>
-              <li class="contact-address">
-                <strong>Address:</strong><br />
-                3230 Yonge Street #4092<br />
-                Toronto, ON M4N 3P6<br />
-                Canada
-              </li>
-              <li class="contact-hours">
-                <strong>Hours:</strong><br />
-                Monday–Friday 10am–4pm<br />
-                Saturday 10am–2pm
-              </li>
-            </ul>
-          </div>
+        <p>
+          Some insurance plans allow direct billing. For others, we provide a receipt you can
+          submit for reimbursement. Coverage varies by insurer and individual plan.
+        </p>
+        <div class="trust-actions">
+          <button class="text-button" type="button" data-dialog="coverage-dialog">
+            Insurance details
+          </button>
+          <button class="text-button" type="button" data-dialog="about-dialog">
+            About My Safe Zone
+          </button>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>My Safe Zone</strong>
+        <span>An affordable therapy initiative by <a href="https://pneumahealth.ca">Pneuma Health</a>.</span>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:info@mysafezone.ca">info@mysafezone.ca</a>
+        <a href="tel:+16475472323">(647) 547-2323</a>
+      </div>
+      <p>My Safe Zone is not a crisis service. If you are in immediate danger, call 911.</p>
+    </footer>
+
+    <dialog class="info-dialog" id="about-dialog" aria-labelledby="about-title">
+      <button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+      <p class="eyebrow">About</p>
+      <h2 id="about-title">Affordable care, backed by Pneuma Health.</h2>
+      <p>
+        My Safe Zone is an affordable therapy initiative by Pneuma Health. It was created to make
+        professional mental health support easier to understand, easier to book, and more
+        financially accessible.
+      </p>
+      <p>
+        Care may be provided by Registered Psychotherapists (RPs), Registered Psychotherapists
+        (Qualifying), and Registered Social Workers (RSWs), depending on your needs and
+        availability.
+      </p>
+      <a class="dialog-link" href="https://pneumahealth.ca">Visit Pneuma Health →</a>
+    </dialog>
+
+    <dialog class="info-dialog" id="coverage-dialog" aria-labelledby="coverage-title">
+      <button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+      <p class="eyebrow">Insurance</p>
+      <h2 id="coverage-title">Coverage depends on your plan.</h2>
+      <p>
+        Many extended-health plans include psychotherapy or social-work benefits. We can bill
+        some insurers directly; with other plans, you pay for the session and submit our receipt
+        for reimbursement.
+      </p>
+      <p>
+        Please confirm that your plan covers your clinician's professional designation before
+        booking. We are happy to help you identify what to ask your insurer.
+      </p>
+      <a class="dialog-link" href="mailto:info@mysafezone.ca?subject=Insurance%20coverage%20question">
+        Ask us about coverage →
+      </a>
+    </dialog>
+
+    <script src="/script.js"></script>
   </body>
 </html>
