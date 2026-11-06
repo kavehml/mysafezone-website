@@ -12,6 +12,10 @@ steps.forEach((step, index) => {
     detail.querySelector(".detail-kicker").textContent = `Step ${index + 1}`;
     detail.querySelector("h3").textContent = step.dataset.title;
     detail.querySelector(":scope > p").textContent = step.dataset.copy;
+
+    const detailLink = detail.querySelector(":scope > a");
+    detailLink.href = step.dataset.link;
+    detailLink.innerHTML = `${step.dataset.linkLabel} <span aria-hidden="true">→</span>`;
   });
 });
 
