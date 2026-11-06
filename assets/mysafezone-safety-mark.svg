@@ -1,21 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
   <title id="title">Three nested arches forming a protected space</title>
   <path
-    d="M10 92V51a40 40 0 0 1 80 0v41"
-    fill="none"
-    stroke="#0d1b2a"
-    stroke-width="11"
+    d="M5 94V50a45 45 0 0 1 90 0v44H80V57a30 30 0 0 0-60 0v37Z"
+    fill="#0d1b2a"
   />
   <path
-    d="M29 92V59a21 21 0 0 1 42 0v33"
-    fill="none"
-    stroke="#415a77"
-    stroke-width="11"
+    d="M27 94V61a23 23 0 0 1 46 0v33H61V69a11 11 0 0 0-22 0v25Z"
+    fill="#415a77"
   />
   <path
-    d="M46 92V70a4 4 0 0 1 8 0v22"
-    fill="none"
-    stroke="#778da9"
-    stroke-width="11"
+    d="M44 94V73a6 6 0 0 1 12 0v21Z"
+    fill="#778da9"
   />
 </svg>
