@@ -131,52 +131,59 @@
           alt="A therapist seated in a bright, welcoming therapy room"
         />
         <div class="hero-wash" aria-hidden="true"></div>
+        <div class="hero-light" aria-hidden="true"></div>
 
         <div class="hero-content">
-          <p class="eyebrow">My Safe Zone · affordable care by Pneuma Health</p>
-          <h1 id="hero-title">Affordable therapy at <span>$99</span> per session.</h1>
+          <p class="eyebrow hero-reveal">Affordable care by Pneuma Health</p>
+          <h1 class="hero-reveal" id="hero-title">Your space to feel heard.</h1>
           <p class="hero-lead">
-            Not sure who to choose? Complete our short matching form and Pneuma Health will help
-            you find the right fit. Ready to choose for yourself? Browse bookable therapists and
-            current availability in Jane.
+            Professional therapy for <strong>$99 per 60-minute session</strong>, online or in
+            Richmond Hill.
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-actions hero-reveal">
             <a
               class="button button-primary"
+              href="https://pneumahealth.janeapp.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              Book a $99 session
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </a>
+            <a
+              class="button button-secondary"
               href="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
               target="_blank"
               rel="noopener"
             >
-              Start matching form
-              <span aria-hidden="true">→</span>
+              Help me find a therapist
             </a>
-            <a
-              class="button button-secondary"
-              href="https://pneumahealth.janeapp.com/"
-              target="_blank"
-              rel="noopener"
-            >Browse therapists &amp; book</a>
           </div>
 
-          <dl class="offer-facts" aria-label="Therapy service details">
-            <div>
-              <dt>3–5 minutes</dt>
-              <dd>Short matching form</dd>
-            </div>
-            <div>
-              <dt>$99</dt>
-              <dd>60-minute session</dd>
-            </div>
-            <div>
-              <dt>Online + Richmond Hill</dt>
-              <dd>Flexible session options</dd>
-            </div>
-          </dl>
+          <a class="scroll-cue hero-reveal" href="#how-it-works">
+            <span>See how it works</span>
+            <span class="scroll-line" aria-hidden="true"></span>
+          </a>
         </div>
       </section>
 
-      <section class="process" id="how-it-works" aria-labelledby="process-title">
+      <section class="service-strip reveal" aria-label="Therapy service details">
+        <div>
+          <strong>$99</strong>
+          <span>60-minute therapy session</span>
+        </div>
+        <div>
+          <strong>Online + in person</strong>
+          <span>Flexible care that meets you where you are</span>
+        </div>
+        <div>
+          <strong>3–5 minutes</strong>
+          <span>To request a thoughtful therapist match</span>
+        </div>
+      </section>
+
+      <section class="process reveal" id="how-it-works" aria-labelledby="process-title">
         <div class="process-heading">
           <div>
             <p class="eyebrow">Simple from the start</p>
@@ -195,6 +202,7 @@
             role="tab"
             aria-selected="true"
             aria-controls="process-detail"
+            data-motion-card
             data-title="Share what you need"
             data-copy="Complete a short intake form about your goals, preferences, and insurance. It usually takes three to five minutes."
             data-link="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
@@ -211,6 +219,7 @@
             role="tab"
             aria-selected="false"
             aria-controls="process-detail"
+            data-motion-card
             data-title="Receive a thoughtful match"
             data-copy="The Pneuma Health team reviews your answers and helps connect you with a therapist who fits your needs and preferences."
             data-link="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
@@ -227,6 +236,7 @@
             role="tab"
             aria-selected="false"
             aria-controls="process-detail"
+            data-motion-card
             data-title="Choose a time in Jane"
             data-copy="Browse bookable therapists, view current availability, and reserve your appointment securely through Pneuma Health's Jane site."
             data-link="https://pneumahealth.janeapp.com/"
@@ -255,7 +265,7 @@
         </div>
       </section>
 
-      <section class="trust-band" aria-label="Service and coverage information">
+      <section class="trust-band reveal" aria-label="Service and coverage information">
         <div>
           <p class="eyebrow">Professional care, clearer cost</p>
           <h2>Support from regulated therapists and social workers.</h2>
@@ -275,7 +285,7 @@
         </div>
       </section>
 
-      <section class="locations" id="locations" aria-labelledby="locations-title">
+      <section class="locations reveal" id="locations" aria-labelledby="locations-title">
         <div class="locations-heading">
           <p class="eyebrow">Where care happens</p>
           <h2 id="locations-title">Online care, with an in-person option in Richmond Hill.</h2>
