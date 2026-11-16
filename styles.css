@@ -1148,3 +1148,5 @@ h1 {
 #match-results {margin-top:40px;scroll-margin-top:100px}
 .matcher :focus-visible {outline:3px solid #415a77;outline-offset:4px}
 @media(max-width:640px){.match-cards{grid-template-columns:1fr}.matcher{padding:48px 20px}.match-fallback .button{display:flex;width:100%;white-space:normal}}
+
+.detailed-form-link {color:#1b263b;font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}.detailed-form-link:hover {color:#2f6f73}.detailed-form-link:focus-visible {outline:3px solid #415a77;outline-offset:4px}
