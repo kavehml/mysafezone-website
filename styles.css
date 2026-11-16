@@ -1158,3 +1158,11 @@ h1 {
 .therapy-faq summary {font-weight:600;cursor:pointer;line-height:1.5}
 .therapy-faq a {color:#1b263b;text-decoration:underline;text-underline-offset:3px}
 .therapy-faq summary:focus-visible {outline:3px solid #415a77;outline-offset:4px}
+
+.reader-guide {max-width:850px;margin:auto;padding:60px 24px 80px;line-height:1.8}
+.reader-guide h1 {font:500 clamp(2.4rem,6vw,4rem)/1.08 Newsreader,serif;margin:18px 0 28px}
+.reader-guide h2 {font:500 clamp(1.7rem,4vw,2.2rem)/1.25 Newsreader,serif;margin-top:42px}
+.reader-guide .guide-lead {font-size:1.2rem}.reader-guide a:not(.button) {text-decoration:underline;text-underline-offset:3px}
+.guide-actions {display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin:28px 0}.reader-guide li {margin:12px 0}
+
+@media(max-width:560px){.guide-header .brand-name{display:none}.guide-header{gap:12px}.reader-guide{padding:36px 20px 60px}}
