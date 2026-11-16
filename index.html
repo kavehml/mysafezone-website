@@ -115,10 +115,8 @@
         <a class="pneuma-link" href="https://pneumahealth.ca">By Pneuma Health</a>
         <a
           class="nav-match"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
-          target="_blank"
-          rel="noopener"
-        >Get matched</a>
+          href="#find-your-therapist"
+        >Find Your Therapist</a>
         <a class="header-cta" href="https://pneumahealth.janeapp.com/locations/my-safe-zone/book" target="_blank" rel="noopener">Book now</a>
       </nav>
     </header>
@@ -137,8 +135,7 @@
           <p class="eyebrow hero-reveal">Affordable care by Pneuma Health</p>
           <h1 class="hero-reveal" id="hero-title">Your space to feel heard.</h1>
           <p class="hero-lead">
-            Professional therapy for <strong>$99 per 60-minute session</strong>, online or in
-            Richmond Hill.
+            Professional therapy for <strong>$99 per 60-minute session</strong>, online. In-person sessions may be arranged on request.
           </p>
 
           <div class="hero-actions hero-reveal">
@@ -148,16 +145,14 @@
               target="_blank"
               rel="noopener"
             >
-              Book a $99 session
+              Book Online — $99 per session
               <span class="button-arrow" aria-hidden="true">→</span>
             </a>
             <a
               class="button button-secondary"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
-              target="_blank"
-              rel="noopener"
+              href="#find-your-therapist"
             >
-              Help me find a therapist
+              Match Me With a Therapist
             </a>
           </div>
 
@@ -174,23 +169,35 @@
           <span>60-minute therapy session</span>
         </div>
         <div>
-          <strong>Online + in person</strong>
-          <span>Flexible care that meets you where you are</span>
+          <strong>Online therapy</strong>
+          <span>In-person care by arrangement</span>
         </div>
         <div>
-          <strong>3–5 minutes</strong>
-          <span>To request a thoughtful therapist match</span>
+          <strong>A few questions</strong>
+          <span>To explore your therapist matches</span>
         </div>
       </section>
 
-      <section class="process reveal" id="how-it-works" aria-labelledby="process-title">
+      <section class="matcher" id="find-your-therapist" aria-labelledby="match-title">
+<p class="eyebrow">A little about you</p><h2 id="match-title">Find your therapist.</h2>
+<p>Answer a few quick questions to explore therapists who may be a good fit. Sessions are online; contact us about in-person arrangements.</p>
+<form id="match-form">
+<fieldset><legend>1. What would you like support with?</legend><p>Select any that fit, or leave these blank if you’re unsure.</p><div class="match-options"><label><input type="checkbox" name="topic" value="anxiety"> Anxiety</label><label><input type="checkbox" name="topic" value="depression"> Depression / low mood</label><label><input type="checkbox" name="topic" value="stress"> Stress</label><label><input type="checkbox" name="topic" value="relationships"> Relationships</label><label><input type="checkbox" name="topic" value="trauma"> Trauma</label><label><input type="checkbox" name="topic" value="grief"> Grief</label><label><input type="checkbox" name="topic" value="transitions"> Life changes</label><label><input type="checkbox" name="topic" value="newcomer"> Newcomer experiences</label></div></fieldset><label class="match-field">2. What age group is the person seeking support in?<select name="age" required><option value="">Please choose</option><option value="child">Child (under 13)</option><option value="teen">Teen (13–17)</option><option value="adult">Adult (18+)</option></select></label>
+<label class="match-field">3. What language feels most comfortable?<select name="language"><option value="">No preference</option><option>Arabic</option><option>English</option><option>Malayalam</option><option>Spanish</option><option>Tamil</option><option value="other">Another language — help me find someone</option></select></label>
+<label class="match-field">4. What would feel most helpful right now?<select name="style"><option value="">I’m not sure yet</option><option value="listen">A space to talk and feel heard</option><option value="tools">Practical tools for everyday challenges</option><option value="understand">Understanding my feelings and patterns</option></select></label>
+<label class="match-field">Anything else you’d like to say? (Optional)<textarea name="note" rows="3" maxlength="1000" placeholder="A sentence or two about what you’re looking for" aria-describedby="note-help"></textarea></label>
+<p id="note-help" class="match-small">Your answers stay in this page and aren’t sent to us. Suggestions use your selections, not this note. You can copy your answers into the detailed help form later. Please avoid sensitive personal details.</p>
+<button class="button button-primary" type="submit">Show my matches →</button>
+</form><noscript>Please enable JavaScript to use matching, or <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform">ask our team for help</a>.</noscript>
+<div id="match-results" tabindex="-1" hidden aria-live="polite"></div></section>
+<section class="process reveal" id="how-it-works" aria-labelledby="process-title">
         <div class="process-heading">
           <div>
             <p class="eyebrow">Simple from the start</p>
             <h2 id="process-title">Three steps to your safe zone.</h2>
           </div>
           <p class="process-intro">
-            Use the guided matching form when you want help choosing, or go directly to Jane when
+            Use the guided matching tool when you want help choosing, or go directly to Jane when
             you are ready to select a therapist and appointment time.
           </p>
         </div>
@@ -204,13 +211,13 @@
             aria-controls="process-detail"
             data-motion-card
             data-title="Share what you need"
-            data-copy="Complete a short intake form about your goals, preferences, and insurance. It usually takes three to five minutes."
-            data-link="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
-            data-link-label="Open matching form"
+            data-copy="Answer a few questions about your needs, age group, and preferred language."
+            data-link="#find-your-therapist"
+            data-link-label="Find your therapist"
           >
             <span class="step-number">01</span>
             <img src="/assets/step-discovery.png" alt="Illustration of exploring therapist options" />
-            <span class="step-label">Complete the form</span>
+            <span class="step-label">Find your therapist</span>
           </button>
 
           <button
@@ -221,8 +228,8 @@
             aria-controls="process-detail"
             data-motion-card
             data-title="Receive a thoughtful match"
-            data-copy="The Pneuma Health team reviews your answers and helps connect you with a therapist who fits your needs and preferences."
-            data-link="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
+            data-copy="Explore up to two suggestions based on therapist profiles. If neither feels right, request personal help from our team."
+            data-link="#find-your-therapist"
             data-link-label="Get matched"
           >
             <span class="step-number">02</span>
@@ -254,14 +261,11 @@
             <h3>Share what you need</h3>
           </div>
           <p>
-            Complete a short intake form about your goals, preferences, and insurance. It usually
-            takes three to five minutes.
+            Answer a few questions to explore therapists who may suit your needs.
           </p>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
-            target="_blank"
-            rel="noopener"
-          >Open matching form <span aria-hidden="true">→</span></a>
+            href="#find-your-therapist"
+          >Find your therapist <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -384,11 +388,9 @@
       </p>
       <a
         class="dialog-link"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeBorMBAX_g2_JuHlsoHkgw8_X29Enh3waB41I9kxOzFYcRNA/viewform"
-        target="_blank"
-        rel="noopener"
+        href="#find-your-therapist"
       >
-        Start the matching form →
+        Find your therapist →
       </a>
     </dialog>
 
