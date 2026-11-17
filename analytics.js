@@ -62,7 +62,6 @@
     });
     gtag('set', 'ads_data_redaction', true);
     gtag('set', 'url_passthrough', false);
-    gtag('js', new Date());
     const config = {
       ...page, send_page_view: false,
       allow_google_signals: false, allow_ad_personalization_signals: false,
@@ -73,6 +72,10 @@
     if (query.get('utm_source') === 'google' && query.get('utm_medium') === 'cpc' && query.get('utm_campaign') === 'msz_canada_search') {
       Object.assign(config, { campaign_source: 'google', campaign_medium: 'cpc', campaign_name: 'msz_canada_search' });
     }
+    // Apply privacy and page-view controls globally before the tag initializes,
+    // including any stream initialization performed by Google's tag container.
+    gtag('set', config);
+    gtag('js', new Date());
     gtag('config', measurementId, config);
     gtag('event', 'page_view', { ...page, send_to: measurementId });
     const script = document.createElement('script');
