@@ -8,7 +8,7 @@ function run(savedChoice, hostname = 'mysafezone.ca', search = '') {
   const scripts = [];
   const listeners = {};
   const storage = new Map();
-  if (savedChoice) storage.set('msz-analytics-choice-v1', JSON.stringify({ choice: savedChoice, at: Date.now() }));
+  if (savedChoice) storage.set('msz-analytics-choice-v2', JSON.stringify({ choice: savedChoice, at: Date.now() }));
   const el = () => ({
     listeners: {}, dataset: {},
     setAttribute() {}, append() {}, focus() {},
@@ -50,10 +50,19 @@ assert.equal(config.allow_google_signals, false);
 assert.equal(config.allow_ad_personalization_signals, false);
 assert.equal(config.send_page_view, false);
 assert.equal(config.campaign_name, 'msz_canada_search');
+const pt = run('allow', 'mysafezone.ca', '?utm_source=psychology_today&utm_medium=referral&utm_campaign=msz_psychology_today&email=private@example.org');
+assert.equal(pt.window.dataLayer.map(args => Array.from(args)).find(args => args[0] === 'config')[2].campaign_name, 'msz_psychology_today');
+const unknown = run('allow', 'mysafezone.ca', '?utm_source=psychology_today&utm_medium=referral&utm_campaign=private@example.org');
+assert.equal(unknown.window.dataLayer.map(args => Array.from(args)).find(args => args[0] === 'config')[2].campaign_name, undefined);
 const target = href => ({ closest: () => ({ href }) });
 active.listeners.click({ target: target('https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/12') });
 assert.equal(commands().filter(args => args[0] === 'event' && args[1] === 'booking_click').length, 1);
 assert.equal(/trauma|private@example|staff_member|\/12/.test(JSON.stringify(commands())), false, 'Private query data and selected therapist never enter payloads');
+active.listeners.click({ target: target('mailto:info@pneumahealth.ca?subject=private@example.org&body=trauma') });
+active.listeners.click({ target: target('tel:+16475472323') });
+active.listeners.click({ target: target('mailto:someone@example.org') });
+assert.equal(commands().filter(args => args[0] === 'event' && args[1] === 'contact_click').length, 2);
+assert.equal(/trauma|private@example|info@|16475472323/.test(JSON.stringify(commands())), false, 'Contact contents never enter payloads');
 active.elements[0].listeners.click({ target: { closest: () => ({ dataset: { choice: 'decline' } }) } });
 assert.equal(active.window['ga-disable-G-J1MQ2ZJ38E'], true);
 assert.equal(active.location.reloaded, true);

@@ -1,7 +1,7 @@
 // Public-site measurement only. Never read matching answers or send therapist IDs.
 (() => {
   const measurementId = 'G-J1MQ2ZJ38E';
-  const preferenceKey = 'msz-analytics-choice-v1';
+  const preferenceKey = 'msz-analytics-choice-v2';
   const allowedPages = new Map([
     ['/', 'My Safe Zone'],
     ['/index.html', 'My Safe Zone'],
@@ -22,7 +22,7 @@
   banner.className = 'analytics-choice';
   banner.setAttribute('aria-labelledby', 'analytics-choice-title');
   banner.innerHTML = `<div><strong id="analytics-choice-title">Your privacy, your choice</strong>
-    <p>May we use optional Google Analytics cookies to understand visits and clicks to our booking site? Google receives usage and device data. We do not send your matching answers, selected therapist or booking details. Declining will not affect your care or use of this site.</p>
+    <p>May we use optional Google Analytics cookies to understand visits and clicks on booking and contact links? Google receives usage and device data. We do not send your matching answers, selected therapist, messages or booking details. Declining will not affect your care or use of this site.</p>
     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s privacy policy</a></div>
     <div class="analytics-actions"><button type="button" data-choice="decline">Decline analytics</button><button type="button" data-choice="allow">Allow analytics</button></div>`;
   banner.hidden = choice !== null;
@@ -72,6 +72,9 @@
     if (query.get('utm_source') === 'google' && query.get('utm_medium') === 'cpc' && query.get('utm_campaign') === 'msz_canada_search') {
       Object.assign(config, { campaign_source: 'google', campaign_medium: 'cpc', campaign_name: 'msz_canada_search' });
     }
+    if (query.get('utm_source') === 'psychology_today' && query.get('utm_medium') === 'referral' && query.get('utm_campaign') === 'msz_psychology_today') {
+      Object.assign(config, { campaign_source: 'psychology_today', campaign_medium: 'referral', campaign_name: 'msz_psychology_today' });
+    }
     // Apply privacy and page-view controls globally before the tag initializes,
     // including any stream initialization performed by Google's tag container.
     gtag('set', config);
@@ -117,9 +120,15 @@
     if (!link) return;
     let destination;
     try { destination = new URL(link.href); } catch (_) { return; }
-    if (destination.hostname !== 'pneumahealth.janeapp.com') return;
-    // This is an outbound click, never a completed-booking conversion.
-    gtag('event', 'booking_click', { ...page, send_to: measurementId });
+    if (destination.hostname === 'pneumahealth.janeapp.com') {
+      // This is an outbound click, never a completed-booking conversion.
+      gtag('event', 'booking_click', { ...page, send_to: measurementId });
+    } else if ((destination.protocol === 'mailto:' && destination.pathname === 'info@pneumahealth.ca') ||
+               (destination.protocol === 'tel:' && destination.pathname.replace(/[^0-9]/g, '') === '16475472323')) {
+      // Count only opening a contact link, never a sent enquiry or an answered call.
+      // Do not send the address, phone number, subject, message, or full link.
+      gtag('event', 'contact_click', { ...page, send_to: measurementId });
+    }
   });
   if (choice === 'decline') clearAnalyticsCookies();
   startAnalytics();
