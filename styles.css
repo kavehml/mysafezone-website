@@ -1230,3 +1230,20 @@ h1 {
 .guide-actions {display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin:28px 0}.reader-guide li {margin:12px 0}
 
 @media(max-width:560px){.guide-header .brand-name{display:none}.guide-header{gap:12px}.reader-guide{padding:36px 20px 60px}}
+
+/* Direct therapist discovery, verified public profiles — November 2026. */
+.therapist-intro{max-width:1160px;margin:0 auto;padding:64px 24px 28px;scroll-margin-top:100px}
+.therapist-intro h2{font-family:Newsreader,serif;font-size:clamp(2rem,4vw,3rem);margin:12px 0 20px}
+.therapist-intro>p{max-width:850px;line-height:1.7}
+.therapist-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:30px 0}
+.therapist-card{border:1px solid #b9c4ce;border-radius:20px;overflow:hidden;background:#f5f7f8;display:flex;flex-direction:column}
+.therapist-card>img{width:100%;height:250px;object-fit:cover;object-position:center 25%}
+.therapist-card>div{padding:22px;display:flex;flex:1;flex-direction:column;gap:12px}
+.therapist-card h3{font-family:Newsreader,serif;font-size:1.65rem;margin:0}
+.therapist-card p{line-height:1.5;margin:0}.therapist-credential{font-size:.88rem;color:#415a77}
+.therapist-card .button{margin-top:auto;white-space:normal;text-align:center;line-height:1.45;padding:12px}
+.therapist-links{display:flex;flex-wrap:wrap;gap:24px;margin:22px 0}.therapist-links a,.therapist-intro .match-small a{text-decoration:underline;text-underline-offset:4px}
+.therapist-intro :focus-visible{outline:3px solid #415a77;outline-offset:4px}
+@media(max-width:780px){.therapist-grid{grid-template-columns:1fr}.therapist-card{display:grid;grid-template-columns:110px 1fr}.therapist-card>img{width:110px;height:150px;margin-top:22px;border-radius:0 12px 12px 0}.therapist-card>div{padding:20px 16px}.therapist-intro{padding:40px 20px 20px}.therapist-card h3{font-size:1.4rem}}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

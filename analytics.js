@@ -22,7 +22,7 @@
   banner.className = 'analytics-choice';
   banner.setAttribute('aria-labelledby', 'analytics-choice-title');
   banner.innerHTML = `<div><strong id="analytics-choice-title">Your privacy, your choice</strong>
-    <p>May we use optional Google Analytics cookies to understand visits and clicks on booking and contact links? Google receives usage and device data. We do not send your matching answers, selected therapist, messages or booking details. Declining will not affect your care or use of this site.</p>
+    <p>May we use optional Google Analytics cookies to understand visits and clicks on booking, contact and callback-form links? Google receives usage and device data. We do not send your matching answers, selected therapist, messages or booking details. Declining will not affect your care or use of this site.</p>
     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google’s privacy policy</a></div>
     <div class="analytics-actions"><button type="button" data-choice="decline">Decline analytics</button><button type="button" data-choice="allow">Allow analytics</button></div>`;
   banner.hidden = choice !== null;
@@ -123,6 +123,9 @@
     if (destination.hostname === 'pneumahealth.janeapp.com') {
       // This is an outbound click, never a completed-booking conversion.
       gtag('event', 'booking_click', { ...page, send_to: measurementId });
+    } else if (destination.hostname === 'docs.google.com' && destination.pathname === '/forms/d/e/1FAIpQLScZybuNpO0uS9r0S9Tds227BgayAe8z0cIVu_FjhuOwMrChSQ/viewform') {
+      // Form opening only; submitted requests are counted privately in Forms.
+      gtag('event', 'contact_request_click', { ...page, send_to: measurementId });
     } else if ((destination.protocol === 'mailto:' && destination.pathname === 'info@pneumahealth.ca') ||
                (destination.protocol === 'tel:' && destination.pathname.replace(/[^0-9]/g, '') === '16475472323')) {
       // Count only opening a contact link, never a sent enquiry or an answered call.
