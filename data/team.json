@@ -139,5 +139,21 @@
     "bio": "You do not need everything figured out to begin—you just need a safe place to start. As a Registered Social Worker (OCSWSSW) with over seven years of experience in healthcare and mental health, I offer a warm, culturally responsive space for adults navigating anxiety, depression, trauma, burnout, grief, and life transitions.\n\nUsing collaborative, trauma-informed care grounded in CBT, ACT, DBT-informed, and mindfulness approaches, I work alongside you to uncover your strengths and build practical tools for resilience. Difficult moments do not define you. Whenever you are ready, let’s take that first step toward clarity and grounded well-being together.",
     "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/19",
     "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": "farnoosh-fakoorziba",
+    "name": "Farnoosh Fakoorziba",
+    "credential": "Registered Dietitian (RD)",
+    "photo": "/assets/farnoosh-fakoorziba.jpg",
+    "languages": [
+      "English",
+      "Farsi"
+    ],
+    "bio": "Farnoosh Fakoorziba is a Registered Dietitian and a member of the College of Dietitians of Ontario. She offers nutrition counselling and education in English and Farsi, with experience supporting clients across the lifespan.\n\nHer compassionate, client-centred approach focuses on caring for the body and building a nourishing relationship with food. Farnoosh shares simple, practical guidance that clients can apply in everyday life.",
+    "contactUrl": "mailto:info@pneumahealth.ca?subject=Dietitian%20appointment%20with%20Farnoosh",
+    "fees": "Nutrition counselling: $99 CAD for 60 minutes or $60 CAD for 30 minutes.",
+    "sourceUrl": "https://www.dawntherapy.ca/nutrition-counselling",
+    "sourceReviewed": "2026-11-22",
+    "publicationApproval": "Owner explicitly requested website publication while staff intake is pending, 2026-11-22."
   }
 ]
