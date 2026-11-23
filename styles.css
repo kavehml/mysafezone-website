@@ -1247,3 +1247,28 @@ h1 {
 @media(max-width:780px){.therapist-grid{grid-template-columns:1fr}.therapist-card{display:grid;grid-template-columns:110px 1fr}.therapist-card>img{width:110px;height:150px;margin-top:22px;border-radius:0 12px 12px 0}.therapist-card>div{padding:20px 16px}.therapist-intro{padding:40px 20px 20px}.therapist-card h3{font-size:1.4rem}}
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Full team directory: shared cards and readable, anchored biographies. */
+.therapist-photo-link{display:block;overflow:hidden}
+.therapist-photo-link img{display:block;width:100%;height:250px;object-fit:cover;object-position:center 25%;transition:transform .2s ease}
+.therapist-photo-link:hover img{transform:scale(1.025)}
+.therapist-card h3 a{color:inherit;text-decoration:none}
+.team-page{max-width:1160px;margin:auto;padding:56px 24px}
+.team-heading{max-width:940px;margin-bottom:48px;scroll-margin-top:110px}
+.team-heading h1{font-family:Newsreader,serif;font-size:clamp(2.8rem,6vw,4.5rem);line-height:1.1;margin:16px 0 24px}
+.team-heading p,.team-profile p{line-height:1.75}
+.team-directory{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.team-directory a{border:1px solid #b9c4ce;padding:10px 15px;border-radius:30px;background:#f5f7f8;text-decoration:none}
+.team-directory a:hover{background:#dce9eb}
+.team-profile{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;padding:40px 0;border-top:1px solid #b9c4ce;scroll-margin-top:100px}
+.team-profile>img{width:240px;height:312px;object-fit:cover;object-position:center 25%;border-radius:20px}
+.team-profile h2,.team-help h2{font-family:Newsreader,serif;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.2;margin:0 0 12px}
+.team-profile .therapist-credential{font-size:1rem;margin:0 0 8px}.team-languages{font-weight:600}
+.team-profile .button{white-space:normal;text-align:center;line-height:1.5}
+.team-help{background:#e2eced;padding:32px;border-radius:20px;margin-top:32px}
+.team-page :focus-visible{outline:3px solid #415a77;outline-offset:4px}
+@media(max-width:780px){.therapist-photo-link img{width:110px;height:150px;margin-top:22px;border-radius:0 12px 12px 0}.team-page{padding:36px 20px}.team-profile{grid-template-columns:1fr;gap:22px}.team-profile>img{width:180px;height:234px}.guide-header nav{display:flex;flex-wrap:wrap;gap:12px}.team-help{padding:24px}}
+@media(prefers-reduced-motion:reduce){.therapist-photo-link img{transition:none}}
+.team-header nav{display:flex;align-items:center;gap:20px}
+@media(max-width:600px){.team-header{align-items:flex-start;gap:16px;flex-direction:column}.team-header nav{gap:16px}.team-profile{scroll-margin-top:170px}}
+.team-header .brand-name,.team-header .nav-link{display:inline}

@@ -1,0 +1,143 @@
+[
+  {
+    "id": 12,
+    "name": "Pablo Allen",
+    "credential": "Registered Psychotherapist (Qualifying)",
+    "photo": "/assets/team-12.png",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "bio": "Pablo Allen is a Registered Psychotherapist (Qualifying) in Ontario with over 15 years of clinical experience in Gestalt Psychotherapy, working with children, adolescents, adults, parents, couples, and families. His humanistic, relational, and trauma-informed approach integrates attachment theory, emotional awareness, mindfulness, and experiential interventions to support individuals navigating anxiety, trauma, relationship difficulties, life transitions, and personal growth. Originally trained in Mexico and further trained in the United States, Pablo brings extensive experience in clinical practice, psychotherapy education, and work with culturally diverse populations. As an immigrant himself, he understands the challenges of cultural adaptation, identity, and belonging, and is committed to providing compassionate, culturally sensitive care in both English and Spanish.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/12",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 9,
+    "name": "Keerat Aujla",
+    "credential": "Registered Psychotherapist (Qualifying)",
+    "photo": "/assets/team-9.jpg",
+    "languages": [
+      "English",
+      "Hindi",
+      "Punjabi"
+    ],
+    "bio": "Keerat is a Registered Psychotherapist (Qualifying) with over seven years of experience in the social service sector. She works with adults (18+) experiencing anxiety, depression, trauma, grief, relationship challenges, and life transitions. Her practice places special emphasis on supporting newcomers and individuals navigating cultural transitions, using a warm, collaborative approach that meets clients where they are.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/9",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 18,
+    "name": "Nicholas Bonk",
+    "credential": "Registered Psychotherapist",
+    "photo": "/assets/team-18.jpg",
+    "languages": [
+      "English"
+    ],
+    "bio": "I am a registered psychotherapist, and offer sessions in English, either online, or over the phone. I help clients work through a variety of problems including stress, anxiety, depression, trauma, family issues, interpersonal issues, relationship issues, and daily difficulties. I offer a variety of counselling modalities including Cognitive Behavioral Therapy, Solution-Focused Therapy, Emotion Focused Therapy, and Dialectical Behavioral Therapy.\n\nI offer a cooperative experience where the client has a say in the direction of counselling. Additionally, the goals of counselling are tailored to the client’s individual needs, comfort level, and perspective to promote personal growth, fulfilment, and a greater understanding of self.\n\nSessions are a safe setting to explore past, current, and future struggles. Both day-to-day difficulties, and major life events are explored in an environment of unconditional, nonjudgemental support.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/18",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 8,
+    "name": "Jennica Campbell",
+    "credential": "Registered Therapeutic Counsellor",
+    "photo": "/assets/team-8.jpg",
+    "languages": [
+      "English"
+    ],
+    "bio": "Hi, I’m Jennica—a Registered Therapeutic Counsellor who believes in the healing power of connection, empathy, and being truly seen and heard. I’ve always been curious about people—why we feel the way we do, what shapes our choices, and how we grow through life’s ups and downs. That curiosity turned into a calling to support others with compassion, understanding, and care.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/8",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 16,
+    "name": "Sana Choghri",
+    "credential": "Registered Psychotherapist (Qualifying)",
+    "photo": "/assets/team-16.jpg",
+    "languages": [
+      "English",
+      "Arabic"
+    ],
+    "bio": "Sana Choghri is a Registered Psychotherapist (Qualifying) who offers therapy in English and Arabic. She supports children, adolescents, and adults, and brings experience working with refugees and newcomers. Sana regularly uses cognitive behavioural therapy and takes a collaborative, culturally responsive approach to helping clients strengthen coping skills and work toward meaningful change.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/16",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 10,
+    "name": "Denise Elliott",
+    "credential": "Registered Social Worker",
+    "photo": "/assets/team-10.jpg",
+    "languages": [
+      "English"
+    ],
+    "bio": "I am a Registered Social Worker (RSW) with an educational background in Child and Youth Care, Psychology, Sociology, and Social Work, as well as comprehensive training in Dialectical Behaviour Therapy (DBT). I have experience supporting individuals through life’s challenges, relationship difficulties, emotional struggles, and personal growth. My approach is warm, compassionate, and non-judgmental, recognizing that everyone has their own unique experiences, strengths, and needs. Above all, I strive to create a safe and welcoming space where you can feel comfortable being yourself, share your experiences openly, and feel genuinely heard, understood, and supported.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/10",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 11,
+    "name": "Christopher Hillier",
+    "credential": "Registered Psychotherapist (Qualifying)",
+    "photo": "/assets/team-11.jpg",
+    "languages": [
+      "English"
+    ],
+    "bio": "Chris Hillier is a Registered Psychotherapist (Qualifying) in Ontario who supports clients navigating anxiety, low mood, trauma, and life transitions. His approach is warm and collaborative, drawing on cognitive behavioural therapy, acceptance and commitment therapy, and dialectical behaviour therapy. Chris helps clients make sense of what they’re experiencing and develop practical ways to respond to difficult thoughts and emotions in everyday life.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/11",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 15,
+    "name": "Oluwatosin JolaOluwa",
+    "credential": "Registered Psychotherapist (Qualifying)",
+    "photo": "/assets/team-15.png",
+    "languages": [
+      "English"
+    ],
+    "bio": "Oluwatosin Jolaoluwa is a Registered Psychotherapist (Qualifying) who supports children, teens, and adults through life’s challenges. She works with individuals experiencing anxiety, depression, trauma, stress, relationship difficulties, grief, low self-esteem, and life transitions, including newcomers adjusting to life in a new country. Oluwatosin takes a compassionate, culturally sensitive, and collaborative approach that respects each client’s unique needs and background. Her goal is to provide a warm, safe, and non-judgmental space where clients can explore their concerns and work toward what matters most to them.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/15",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 20,
+    "name": "Ashley Lecce",
+    "credential": "Registered Psychotherapist (Qualifying)",
+    "photo": "/assets/team-20.jpg",
+    "languages": [
+      "English"
+    ],
+    "bio": "Ashley is a Registered Psychotherapist (Qualifying) who works with teens, adults, and couples. She helps individuals navigate anxiety, depression, relationship challenges, emotional regulation, and major life transitions. Drawing from CBT, ACT, Solution-Focused Therapy, and mindfulness practices, her approach is tailored to your unique needs. Ashley also brings experience from her work as an ABA therapist, supporting neurodivergent children and families, particularly those with autism, through individualized interventions.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/20",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 14,
+    "name": "Kavya Muraly",
+    "credential": "Registered Social Worker (MSW, RSW)",
+    "photo": "/assets/team-14.jpg",
+    "languages": [
+      "English",
+      "Hindi",
+      "Tamil",
+      "Malayalam"
+    ],
+    "bio": "Kavya Muraly is a Registered Social Worker (MSW, RSW) in good standing with the OCSWSSW, and a counsellor and psychotherapist with experience providing clinical counselling. She supports clients across the lifespan through mental health assessment, treatment planning, and personalized care. Her practice is grounded in a client-centred, compassionate, and culturally responsive approach, helping clients navigate life transitions and everyday mental health challenges. Kavya is committed to creating a safe, confidential, and empowering environment where clients feel heard, understood, and supported in building emotional resilience and meaningful change.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/14",
+    "sourceReviewed": "2026-11-22"
+  },
+  {
+    "id": 19,
+    "name": "Jibin Vadakkemuriyil John",
+    "credential": "Registered Social Worker (MSW, RSW)",
+    "photo": "/assets/team-19.jpg",
+    "languages": [
+      "English",
+      "Tamil",
+      "Malayalam"
+    ],
+    "bio": "You do not need everything figured out to begin—you just need a safe place to start. As a Registered Social Worker (OCSWSSW) with over seven years of experience in healthcare and mental health, I offer a warm, culturally responsive space for adults navigating anxiety, depression, trauma, burnout, grief, and life transitions.\n\nUsing collaborative, trauma-informed care grounded in CBT, ACT, DBT-informed, and mindfulness approaches, I work alongside you to uncover your strengths and build practical tools for resilience. Difficult moments do not define you. Whenever you are ready, let’s take that first step toward clarity and grounded well-being together.",
+    "janeUrl": "https://pneumahealth.janeapp.com/locations/my-safe-zone/book#/staff_member/19",
+    "sourceReviewed": "2026-11-22"
+  }
+]
