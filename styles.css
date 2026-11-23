@@ -1272,3 +1272,10 @@ h1 {
 .team-header nav{display:flex;align-items:center;gap:20px}
 @media(max-width:600px){.team-header{align-items:flex-start;gap:16px;flex-direction:column}.team-header nav{gap:16px}.team-profile{scroll-margin-top:170px}}
 .team-header .brand-name,.team-header .nav-link{display:inline}
+
+/* Reader-selected Google source preference; no third-party script is loaded. */
+.preferred-source{max-width:1112px;margin:36px auto;padding:28px 24px;background:#e2eced;border:1px solid #b9c4ce;border-radius:20px}
+.preferred-source h2{font-family:Newsreader,serif;font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 12px}
+.preferred-source p{line-height:1.65;max-width:780px}
+.preferred-source .button{white-space:normal;text-align:center;line-height:1.5}
+@media(max-width:780px){main>.preferred-source{margin:24px 20px}.reader-guide>.preferred-source{margin:24px 0}}
