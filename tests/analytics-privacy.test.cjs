@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync(require('node:path').join(__dirname, '../analytics.js'), 'utf8');
 
-function run(savedChoice, hostname = 'mysafezone.ca', search = '') {
+function run(savedChoice, hostname = 'mysafezone.ca', search = '', pathname = '/') {
   const elements = [];
   const scripts = [];
   const listeners = {};
@@ -24,7 +24,7 @@ function run(savedChoice, hostname = 'mysafezone.ca', search = '') {
     querySelector: () => el(),
     addEventListener(type, fn) { listeners[type] = fn; },
   };
-  const location = { hostname, pathname: '/', search, reload() { this.reloaded = true; } };
+  const location = { hostname, pathname, search, hash: '#therapist-16', reload() { this.reloaded = true; } };
   const window = {};
   vm.runInNewContext(source, {
     document, location, window, URL, URLSearchParams, Date,
@@ -40,6 +40,26 @@ const declined = run('decline');
 assert.equal(declined.scripts.length, 0, 'Declined visitors are not measured');
 const local = run('allow', '127.0.0.1');
 assert.equal(local.scripts.length, 0, 'Local QA cannot contaminate production reporting');
+// Every public landing page must load the consent gate, and only explicitly
+// reviewed routes may send events. Profile fragments must stay private.
+const routes = ['/', '/guides/affordable-therapy/', '/team/', '/therapy/arabic/', '/therapy/hindi-punjabi/', '/community/', '/nutrition/'];
+const path = require('node:path');
+for (const route of routes) {
+  const html = fs.readFileSync(path.join(__dirname, '..', route.slice(1), 'index.html'), 'utf8');
+  assert.match(html, /<script[^>]+src="\/analytics\.js(?:\?[^" ]+)?"[^>]*defer/);
+  for (const pathname of [route, route + 'index.html']) {
+    assert.equal(run(undefined, 'mysafezone.ca', '', pathname).scripts.length, 0);
+    assert.equal(run('decline', 'mysafezone.ca', '', pathname).scripts.length, 0);
+    const allowed = run('allow', 'mysafezone.ca', '?email=private@example.org', pathname);
+    assert.equal(allowed.scripts.length, 1);
+    const payload = allowed.window.dataLayer.map(args => Array.from(args));
+    assert.equal(payload.find(args => args[0] === 'config')[2].page_location, 'https://mysafezone.ca' + route);
+    assert.equal(/therapist-16|private@example/.test(JSON.stringify(payload)), false);
+  }
+}
+for (const pathname of ['/other/', '/patients/123/', '/team/private/']) {
+  assert.equal(run('allow', 'mysafezone.ca', '', pathname).scripts.length, 0);
+}
 const active = run('allow', 'mysafezone.ca', '?email=private@example.org&concern=trauma&utm_source=google&utm_medium=cpc&utm_campaign=msz_canada_search');
 assert.equal(active.scripts.length, 1);
 const commands = () => active.window.dataLayer.map(args => Array.from(args));

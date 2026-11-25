@@ -4,12 +4,15 @@
   const preferenceKey = 'msz-analytics-choice-v2';
   const allowedPages = new Map([
     ['/', 'My Safe Zone'],
-    ['/index.html', 'My Safe Zone'],
     ['/guides/affordable-therapy/', 'Affordable therapy guide'],
-    ['/guides/affordable-therapy/index.html', 'Affordable therapy guide'],
+    ['/team/', 'Meet our team'],
+    ['/therapy/arabic/', 'Arabic therapy'],
+    ['/therapy/hindi-punjabi/', 'Hindi and Punjabi therapy'],
+    ['/community/', 'Community resources'],
+    ['/nutrition/', 'Nutrition counselling'],
   ]);
-  if (!allowedPages.has(location.pathname)) return;
   const canonicalPath = location.pathname.replace(/index\.html$/, '');
+  if (!allowedPages.has(canonicalPath)) return;
   let choice = null;
   try {
     const saved = JSON.parse(localStorage.getItem(preferenceKey));
@@ -43,7 +46,7 @@
   const gtag = function () { window.dataLayer.push(arguments); };
   const page = {
     page_location: 'https://mysafezone.ca' + canonicalPath,
-    page_title: allowedPages.get(location.pathname),
+    page_title: allowedPages.get(canonicalPath),
     // Referrer paths and query strings can contain private information.
     page_referrer: '',
   };
