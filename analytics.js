@@ -8,6 +8,7 @@
     ['/team/', 'Meet our team'],
     ['/therapy/arabic/', 'Arabic therapy'],
     ['/therapy/hindi-punjabi/', 'Hindi and Punjabi therapy'],
+    ['/therapy/malayalam/', 'Malayalam therapy'],
     ['/community/', 'Community resources'],
     ['/nutrition/', 'Nutrition counselling'],
   ]);

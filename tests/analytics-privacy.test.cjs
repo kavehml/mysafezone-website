@@ -42,7 +42,7 @@ const local = run('allow', '127.0.0.1');
 assert.equal(local.scripts.length, 0, 'Local QA cannot contaminate production reporting');
 // Every public landing page must load the consent gate, and only explicitly
 // reviewed routes may send events. Profile fragments must stay private.
-const routes = ['/', '/guides/affordable-therapy/', '/team/', '/therapy/arabic/', '/therapy/hindi-punjabi/', '/community/', '/nutrition/'];
+const routes = ['/', '/guides/affordable-therapy/', '/team/', '/therapy/arabic/', '/therapy/hindi-punjabi/', '/therapy/malayalam/', '/community/', '/nutrition/'];
 const path = require('node:path');
 for (const route of routes) {
   const html = fs.readFileSync(path.join(__dirname, '..', route.slice(1), 'index.html'), 'utf8');
