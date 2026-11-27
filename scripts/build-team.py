@@ -1,4 +1,4 @@
-"""Render both public team surfaces from reviewed data/team.json. No network access."""
+"""Render public team surfaces from reviewed data/team.json. No network access."""
 import json, re
 from pathlib import Path
 from html import escape as esc
@@ -38,3 +38,23 @@ page+=''.join(f'<a href="#therapist-{t["id"]}">{esc(t["name"])}</a>' for t in te
 page+='</nav></section>'+''.join(map(profile,team))+'''<section class="team-help"><h2>Not sure who to choose?</h2><p>Our team can help you explore your options.</p><a class="button button-secondary" href="/#booking-help">Ask our team for help →</a></section></main><footer class="site-footer"><div class="footer-brand"><strong>My Safe Zone</strong><span>The affordable care program of <a href="https://pneumahealth.ca">Pneuma Health</a>.</span></div><div class="footer-contact"><a href="/">Back to My Safe Zone</a><a href="mailto:care@mysafezone.ca?subject=My%20Safe%20Zone%20enquiry">care@mysafezone.ca</a><a href="tel:+16475472323">(647) 547-2323</a></div><p>My Safe Zone is not a crisis service. If you are in immediate danger, call 911.</p></footer><script src="/analytics.js?v=20261127-care-email" defer></script></body></html>'''
 (ROOT/'team/index.html').write_text(page+'\n')
 print(f'Rendered {len(team)} homepage cards and {len(team)} full profiles.')
+
+# Keep the community landing page in sync with the same reviewed roster.
+community = ROOT / 'community/index.html'
+if community.exists():
+    source = community.read_text()
+    therapy = [t for t in team if 'Dietitian' not in t['credential']]
+    nutrition = [t for t in team if 'Dietitian' in t['credential']]
+    languages = sorted({language for t in therapy for language in t['languages']})
+    portraits = ''.join(f'<a href="/team/#therapist-{t["id"]}" aria-label="Meet {esc(t["name"])}"><img src="{esc(t["photo"])}" width="140" height="160" alt="{esc(t["name"])}"></a>' for t in team)
+    counts = f'<div><strong>{len(team)}</strong><span>people on our care team</span></div><div><strong>{len(therapy)}</strong><span>therapy &amp; counselling practitioners</span></div><div><strong>{len(languages)}</strong><span>languages across our therapy team</span></div>'
+    cards = []
+    for t in team:
+        service = 'Nutrition counselling' if t in nutrition else 'Therapy & counselling'
+        cards.append(f'''<article class="community-person"><a class="person-portrait" href="/team/#therapist-{t['id']}" aria-label="Read {esc(t['name'])}'s profile">{image(t)}</a><div><p class="person-service">{esc(service)}</p><h3><a href="/team/#therapist-{t['id']}">{esc(t['name'])}</a></h3><p class="person-credential">{esc(t['credential'])}</p><p class="person-languages">{esc(', '.join(t['languages']))}</p><a class="text-link" href="/team/#therapist-{t['id']}">Read profile<span class="sr-only"> for {esc(t['name'])}</span> →</a></div></article>''')
+    for label, content in [('PORTRAITS', portraits), ('COUNTS', counts), ('TEAM', '\n'.join(cards))]:
+        start, end = f'<!-- COMMUNITY {label} START -->', f'<!-- COMMUNITY {label} END -->'
+        assert source.count(start) == source.count(end) == 1, label
+        source = re.sub(re.escape(start)+'.*?'+re.escape(end),lambda _, c=content,a=start,b=end:a+'\n'+c+'\n'+b,source,flags=re.S)
+    community.write_text(source)
+    print(f'Rendered {len(team)} community cards, with {len(therapy)} therapy/counselling practitioners and {len(nutrition)} dietitian.')

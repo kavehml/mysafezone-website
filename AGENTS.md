@@ -1,6 +1,6 @@
 # My Safe Zone team maintenance
 
-When a therapist is added to or removed from the My Safe Zone team, update `data/team.json` and run `python3 scripts/build-team.py`. This generates every homepage card and every `/team/` profile together. Commit both generated pages with the data change. Do not maintain a separate featured-only roster or edit generated cards directly.
+When a therapist is added to or removed from the My Safe Zone team, update `data/team.json` and run `python3 scripts/build-team.py`. This generates every homepage card, every `/team/` profile, and the `/community/` portraits, counts and practitioner cards together. Commit both generated pages with the data change. Do not maintain a separate featured-only roster or edit generated cards directly.
 
 Use verified public professional names, actual designations, current approved biographies, photos and individual Jane staff IDs. Confirm required onboarding is complete before publishing newly hired practitioners, following the Pneuma Health workspace handoff. Never infer onboarding completion from a Jane listing. The November 22 directory mirrors the existing public My Safe Zone roster explicitly requested by the owner; this is not onboarding approval for future hires.
 
