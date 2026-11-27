@@ -130,7 +130,7 @@
     } else if (destination.hostname === 'docs.google.com' && destination.pathname === '/forms/d/e/1FAIpQLScZybuNpO0uS9r0S9Tds227BgayAe8z0cIVu_FjhuOwMrChSQ/viewform') {
       // Form opening only; submitted requests are counted privately in Forms.
       gtag('event', 'contact_request_click', { ...page, send_to: measurementId });
-    } else if ((destination.protocol === 'mailto:' && destination.pathname === 'info@pneumahealth.ca') ||
+    } else if ((destination.protocol === 'mailto:' && destination.pathname === 'care@mysafezone.ca') ||
                (destination.protocol === 'tel:' && destination.pathname.replace(/[^0-9]/g, '') === '16475472323')) {
       // Count only opening a contact link, never a sent enquiry or an answered call.
       // Do not send the address, phone number, subject, message, or full link.
